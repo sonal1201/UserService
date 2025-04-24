@@ -7,17 +7,17 @@ const userSchema = new mongoose.Schema({
         unique: true
     },
     username: {
-        type: string,
+        type: String,
         required: true,
         unique: true
     },
-    passsword: {
-        type: string,
-        require: true
-    }
-})
+    password: {
+        type: String,
+        required: true
+    },
+}, { timestamps: true })
 
-const User = new mongoose.model('User', userSchema);
+const User =  mongoose.model('User', userSchema);
 
 module.exports = User;
 
