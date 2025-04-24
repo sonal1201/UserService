@@ -1,10 +1,9 @@
-const express = require('express')
+const express = require('express');
+const apiRoute = require('./routes');
 
 const app = express();
 
-app.use('/',()=>{
-
-})
+app.use('/api',apiRoute)
 
 
 app.listen(3000,()=>{
